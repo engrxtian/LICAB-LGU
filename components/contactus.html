@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licab | LGU</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    
+</head>
+<body class="bg-info-subtle"> 
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-md fs-4 text-white fixed-top" style="height: 90px; background: linear-gradient(to right, #009933 0%, #0a5523 87%, #011d0a);">
+        <button class="navbar-toggler justify-content-end bg-secondary border-black " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html"><i>Home</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/components/gallery.html"><i>Gallery</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/components/activity.html"><i>Activity</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/components/contactus.html"><i>Contact Us</i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+      <!-- licab logo -->
+    <div>
+      <img src="/img/licab2.png" alt="Image" style="width: 100%; margin-top: 100px;">
+    </div><br><br>
+    <div class="container center-form">
+      <div class="col-md-6">
+          <h1 class="text-center">Contact Us</h1>
+          <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+              
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+              <br> <br>
+              <button type="button" class="btn btn-primary" onclick="sendEmail()">Send Email</button>
+          </form>
+      </div>
+  </div>
+
+  <div class="container-fluid justify-content-center">
+    <div class="social-icons justify-content-center">
+      <a href="https://www.facebook.com/yourusername" target="_blank">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/yourusername" target="_blank">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/yourusername" target="_blank">
+          <i class="fab fa-twitter"></i>
+      </a>
+  </div>
+  
+</div>
+
+  <script>
+      function sendEmail() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          var subject = "Contact Us: " + name;
+          var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+
+          var mailtoLink = "mailto:your@email.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+          window.location.href = mailtoLink;
+      }
+  </script>
+    <br><br><br>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+</body>
+<div class="footer">
+  <p>&copy; 2023 All right reserved By Xtian</p>
+</div>
+</html>
